@@ -1,0 +1,203 @@
+#!/usr/bin/make -f
+# debian/rules for PNP4Nagios
+#
+# Written by Sven Velt <sven@velt.de> and Sebastian Harl <tokkee@debian.org>.
+
+include /usr/share/quilt/quilt.make
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+ifneq ($(DEB_HOST_GNU_TYPE),$(DEB_BUILD_GNU_TYPE))
+CROSS= --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
+else
+CROSS= --build $(DEB_BUILD_GNU_TYPE)
+endif
+
+get-orig-source:
+	uscan --force --verbose --rename
+
+config.status: configure
+	dh_testdir
+
+	for file in config.guess config.sub; do \
+		mv $$file $$file.upstream; \
+		ln -s /usr/share/misc/$$file .; \
+	done
+
+	./configure $(CROSS) \
+				--with-layout=debian \
+				--mandir=/usr/share/man \
+				--infodir=/usr/share/info \
+				--without-kohana \
+				--with-kohana_system=/usr/share/php/kohana2/system \
+				--with-httpd-conf=/etc/apache2/conf.d \
+				CFLAGS="$(CFLAGS)"
+
+build: build-arch build-indep
+
+build-arch: build-stamp
+
+build-indep: build-stamp
+
+build-stamp: $(QUILT_STAMPFN) config.status
+	dh_testdir
+
+	# Check whether all patches have been applied.
+	( cd debian/patches/; for patch in *; do \
+		if test "$$patch" != "series"; then \
+			grep "$$patch" series > /dev/null \
+				|| ( echo "$$patch not enabled\!"; exit 1 ); \
+		fi; done )
+
+	$(MAKE) all
+
+	touch $@
+
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+
+	for file in config.guess config.sub; do \
+		if [ -e $$file.upstream ]; then \
+			rm -f $$file; \
+			mv $$file.upstream $$file; \
+		fi \
+	done
+
+	[ ! -f Makefile ] || $(MAKE) distclean
+
+	dh_clean
+	debconf-updatepo
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp \
+		INSTALL_OPTS="--owner=root --group=root" install install-config
+
+	# Ignore install.php (for future debugging don't delete it)
+	touch debian/tmp/usr/share/pnp4nagios/html/install.ignore
+
+	mkdir -p debian/tmp/usr/share/doc/pnp4nagios/examples/
+
+	# Move template config dir to /etc/pnp4nagios/templates
+	rmdir debian/tmp/usr/share/pnp4nagios/html/templates
+	mkdir debian/tmp/etc/pnp4nagios/templates
+	mv debian/tmp/usr/share/pnp4nagios/html/templates.special \
+		debian/tmp/usr/share/doc/pnp4nagios/examples/
+	mkdir debian/tmp/etc/pnp4nagios/templates.special
+
+	mkdir -p debian/tmp/usr/sbin/
+	mv debian/tmp/usr/bin/npcd \
+		debian/tmp/usr/sbin/
+
+	mv debian/tmp/etc/pnp4nagios/rra.cfg-sample \
+		debian/tmp/etc/pnp4nagios/rra.cfg
+
+	mv debian/tmp/etc/pnp4nagios/nagios.cfg-sample \
+		debian/tmp/usr/share/doc/pnp4nagios/examples/nagios.cfg
+
+	mv debian/tmp/etc/pnp4nagios/misccommands.cfg-sample \
+		debian/tmp/usr/share/doc/pnp4nagios/examples/misccommands.cfg
+
+	mkdir debian/tmp/usr/share/doc/pnp4nagios/examples/check_commands
+	mv debian/tmp/etc/pnp4nagios/check_commands/check_nwstat.cfg-sample \
+		debian/tmp/usr/share/doc/pnp4nagios/examples/check_commands/check_nwstat.cfg
+
+	mkdir debian/tmp/usr/share/doc/pnp4nagios/examples/pages
+	mv debian/tmp/etc/pnp4nagios/pages/web_traffic.cfg-sample \
+		debian/tmp/usr/share/doc/pnp4nagios/examples/pages/web_traffic.cfg
+
+	cp -av contrib/ssi debian/tmp/usr/share/doc/pnp4nagios/examples/
+	rm -fv debian/tmp/usr/share/doc/pnp4nagios/examples/ssi/*.in
+
+	# Remove external PHP classes/libraries: FPDF, FPDF-TPL, FPDI
+	rm -r debian/tmp/usr/share/pnp4nagios/html/application/vendor/fpdf
+
+	# Remove external JavaScript files: jQuery and jQuery-UI
+	rm debian/tmp/usr/share/pnp4nagios/html/media/js/jquery-min.js
+	rm debian/tmp/usr/share/pnp4nagios/html/media/js/jquery-ui.min.js
+
+	# Clean up some files
+	rmdir debian/tmp/usr/bin
+	mv debian/tmp/etc/pnp4nagios/check_commands/check_all_local_disks.cfg-sample \
+		debian/tmp/etc/pnp4nagios/check_commands/check_all_local_disks.cfg
+	rm debian/tmp/etc/pnp4nagios/check_commands/check_nrpe.cfg-sample
+
+	# Add Debian specific config and placeholder files
+	#touch debian/tmp/etc/pnp4nagios/pages/.placeholder
+	cp -av debian/nagios.cfg debian/tmp/etc/pnp4nagios/
+	cp -av debian/check_commands/* debian/tmp/etc/pnp4nagios/check_commands/
+
+	cp -av sample-config/httpd.conf debian/tmp/etc/pnp4nagios/apache.conf
+
+	# Remove unnecessary config files (duplicates)
+	rm -f debian/tmp/etc/pnp4nagios/config_local.php
+	rm -f debian/tmp/etc/pnp4nagios/config.php.0.6*
+
+	# Add subdirs to /var/spool/pnp4nagios/ to prepare for different modes
+	mkdir debian/tmp/var/spool/pnp4nagios/nagios
+	mkdir debian/tmp/var/spool/pnp4nagios/npcd
+
+	# Delete not used and empty directories
+	#rmdir debian/tmp/usr/share/pnp4nagios/html/application/logs/
+	rmdir debian/tmp/usr/share/pnp4nagios/html/application/cache/
+	rmdir debian/tmp/usr/share/pnp4nagios/html/application/hooks/
+	#rmdir debian/tmp/usr/share/pnp4nagios/html/application/libraries/
+
+	mkdir debian/tmp/etc/pnp4nagios/templates.d
+	cp debian/README.templates.d debian/tmp/etc/pnp4nagios/templates.d/README
+
+	dh_install --sourcedir=debian/tmp --fail-missing
+
+# Build architecture-independent files here.
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs -i ChangeLog
+	dh_installdocs -A -i AUTHORS README debian/README.Debian
+	dh_installexamples -i
+	dh_installdebconf -i
+	dh_installinit -i
+	dh_installman -i
+	dh_link -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs -a ChangeLog
+	dh_installdocs -A -a AUTHORS README debian/README.Debian
+	dh_installexamples -a
+	dh_installdebconf -a
+	dh_installinit -ppnp4nagios-bin --name=npcd
+	dh_installinit -ppnp4nagios-bin --name=pnp_gearman_worker
+	dh_installman -a
+	dh_link -a
+	dh_strip -a
+	dh_compress -a
+	dh_fixperms -a
+	dh_installdeb -a
+	dh_shlibdeps -a
+	dh_gencontrol -a
+	dh_md5sums -a
+	dh_builddeb -a
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

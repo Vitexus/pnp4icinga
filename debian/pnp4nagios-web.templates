@@ -1,0 +1,9 @@
+Template: pnp4nagios-web/httpd
+Type: multiselect
+Choices: apache2
+Default: apache2
+_Description: Web servers to configure for PNP4Nagios:
+ Please select which web servers should be configured for PNP4Nagios.
+ .
+ If you would prefer to perform configuration manually, leave all
+ servers unselected.

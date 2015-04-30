@@ -1,0 +1,4 @@
+/usr/share/php/fpdf /usr/share/pnp4nagios/html/application/vendor/fpdf
+/usr/share/php/fpdi /usr/share/pnp4nagios/html/application/vendor/fpdi
+/usr/share/javascript/jquery/jquery.min.js /usr/share/pnp4nagios/html/media/js/jquery-min.js
+/usr/share/javascript/jquery-ui/jquery-ui.js /usr/share/pnp4nagios/html/media/js/jquery-ui.min.js

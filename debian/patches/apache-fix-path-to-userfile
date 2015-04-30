@@ -1,0 +1,15 @@
+Description: Fix config directory in the sample httpd.conf.
+Author: Sven Velt <sven@velt.de>
+Forwarded: not-needed
+
+--- a/sample-config/httpd.conf.in
++++ b/sample-config/httpd.conf.in
+@@ -11,7 +11,7 @@
+    	#
+    	AuthName "Nagios Access"
+    	AuthType Basic
+-   	AuthUserFile /usr/local/nagios/etc/htpasswd.users
++   	AuthUserFile /etc/nagios3/htpasswd.users
+    	Require valid-user
+ 	<IfModule mod_rewrite.c>
+ 		# Turn on URL rewriting

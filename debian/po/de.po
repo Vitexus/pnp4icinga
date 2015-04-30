@@ -1,0 +1,40 @@
+# Copyright (C) 2011 Sebastian Harl <tokkee@debian.org>
+# This file is distributed under the same license as the pnp4nagios package.
+#
+# Sebastian Harl <tokkee@debian.org>, 2011.
+# Based on the German nagios3/httpd translation by Matthias Julius
+# <mdeb@julius-net.net>.
+msgid ""
+msgstr ""
+"Project-Id-Version: pnp4nagios\n"
+"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"POT-Creation-Date: 2011-02-10 12:58+0100\n"
+"PO-Revision-Date: 2011-04-18 10:15+0200\n"
+"Last-Translator: Sebastian Harl <tokkee@debian.org>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Web servers to configure for PNP4Nagios:"
+msgstr "Für PNP4Nagios einzurichtende Web-Server:"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4Nagios."
+msgstr "Bitte wählen Sie, welche Web-Server für PNP4Nagios eingerichtet "
+"werden sollen."
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid ""
+"If you would prefer to perform configuration manually, leave all servers "
+"unselected."
+msgstr "Falls Sie es vorziehen, die Einrichtung manuell durchzuführen, "
+"lassen Sie alle Server deselektiert."

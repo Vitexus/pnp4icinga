@@ -1,0 +1,28 @@
+Description: Install templates into /etc/ rather than /usr/share/.
+ Also, add support for templates.d directory.
+Author: Sven Velt <sven@velt.de>, Sebastian Harl <tokkee@debian.org
+Forwarded: not-needed
+
+--- a/sample-config/pnp/config.php.in
++++ b/sample-config/pnp/config.php.in
+@@ -214,12 +214,18 @@
+ # Add your own template directories here
+ # First match wins!
+ #$conf['template_dirs'][] = '/usr/local/check_mk/pnp-templates';
+-$conf['template_dirs'][] = '@datarootdir@/templates';
++$conf['template_dirs'][] = '@sysconfdir@/templates';
++$templates_d = glob("/etc/pnp4nagios/templates.d/*", GLOB_ONLYDIR);
++if (is_array($templates_d) && (count($templates_d) > 0)) {
++	foreach ($templates_d as $dirname) {
++		$conf['template_dirs'][] = "$dirname";
++	}
++}
+ $conf['template_dirs'][] = '@datarootdir@/templates.dist';
+ 
+ #
+ # Directory to search for special templates
+ #
+-$conf['special_template_dir'] = '@datarootdir@/templates.special';
++$conf['special_template_dir'] = '@sysconfdir@/templates.special';
+ 
+ #

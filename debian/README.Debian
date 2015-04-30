@@ -1,0 +1,79 @@
+PNP4Nagios for Debian
+---------------------
+
+PNP4Nagios supports several modes of operation. They differ in the way how
+performance data is being processed and, thus, the efficiency of PNP. Detailed
+documentation is available at <http://docs.pnp4nagios.org/pnp-0.6/modes>.
+
+Using bulk mode
+---------------
+
+We recommend to use bulk mode with NPCD and npcdmod. This will facilitate an
+easy installation and fast processing of performance data. To enable NPCD, set
+'RUN' to 'yes' in /etc/default/npcd.
+
+In order to enable processing of performance data in Nagios, please change the
+"process_performance_data" statement in "/etc/nagios3/nagios.cfg" to
+"process_performance_data=1".
+
+To register the NPC event broker module (npcdmod), add the following line
+(without quotes) to "/etc/nagios3/nagios.cfg":
+
+"broker_module=/usr/lib/pnp4nagios/npcdmod.o config_file=/etc/pnp4nagios/npcd.cfg"
+
+Finally reload your Nagios server by running "/etc/init.d/nagios3 reload". All
+performance data should be processed now.
+
+If you want links to PNP4Nagios for your monitored hosts and services in the
+Nagios web frontend just add
+
+- "action_url  /pnp4nagios/graph?host=$HOSTNAME$"
+  to your hosts or host template(s)
+
+- "action_url  /pnp4nagios/graph?host=$HOSTNAME$&srv=$SERVICEDESC$"
+  to your services or service template(s)
+
+For more information and different modes of operation, see
+<http://docs.pnp4nagios.org/pnp-0.6/config>.
+
+ -- Sven Velt <sven@velt.de>  Wed, 30 Sep 2009 13:55:35 +0000
+
+Using Gearman mode
+------------------
+
+Starting with version 0.6.12, PNP4Nagios may operate as a Gearman worker. This
+is useful in large, distributed setups using Nagios's mod_gearman. To use
+the PNP Gearman worker, you'll need a running mod_gearman environment. See
+<http://labs.consol.de/lang/en/nagios/mod-gearman/> for detailed setup
+instructions.
+
+In addition, the following configuration is required to get you started:
+
+- Enable processing of performance data in Nagios: set
+  'process_performance_data=1' in "/etc/nagios3/nagios.cfg" and reload your
+  Nagios server: /etc/init.d/nagios3 reload.
+
+- Enable the PNP Gearman worker daemon by setting 'RUN' to 'yes' in
+  /etc/default/pnp_gearman_worker. Check the Gearman related options in
+  "/etc/pnp4nagios/process_perfdata.cfg" (GEARMAN_HOST and encryption
+  settings) and start the Gearman worker: /etc/init.d/pnp_gearman_worker start
+
+- Enable distribution of performance data in mod_gearman by setting the
+  'perfdata=yes' option.
+
+When operating in Gearman mode, process_perfdata.pl requires the
+Gearman::Worker, MIME::Base64, and Crypt::Rijndael Perl modules. These are
+available in the libgearman-client-perl, perl, and libcrypt-rijndael-perl
+Debian packages (see packages suggested by pnp4nagios-bin).
+
+ -- Sebastian Harl <tokkee@debian.org>  Wed, 27 Apr 2011 09:32:52 +0200
+
+Installation with Icinga
+------------------------
+
+If you use Icinga you also have to change /etc/pnp4nagios/apache.conf and
+replace the line "AuthUserFile /etc/icinga/htpasswd.users" with
+"AuthUserFile /etc/icinga/htpasswd.users".
+
+ -- Alexander Reichle-Schmehl <tolimar@debian.org>  Tue, 25 Oct 2011 14:31:28 +0200
+

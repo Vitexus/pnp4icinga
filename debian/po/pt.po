@@ -1,0 +1,40 @@
+# Portuguese translation for pnp4nagios
+# Copyright (C) 2011 Pedro Ribeiro
+# This file is distributed under the same license as the pnp4nagios package.
+# Pedro Ribeiro <p.m42.ribeiro@gmail.com>, 2011
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pnp4nagios 0.6.13-1\n"
+"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"POT-Creation-Date: 2011-02-10 12:58+0100\n"
+"PO-Revision-Date: 2011-12-06 00:18+0000\n"
+"Last-Translator: Pedro Ribeiro <p.m42.ribeiro@gmail.com>, 2011\n"
+"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Web servers to configure for PNP4Nagios:"
+msgstr "Servidores Web a configurar para o PNP4Nagios:"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4Nagios."
+msgstr ""
+"Por favor escolha os servidores web que devem ser configurados para o "
+"PNP4Nagios."
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid ""
+"If you would prefer to perform configuration manually, leave all servers "
+"unselected."
+msgstr ""
+"Se preferir configurar manualmente, não seleccione nenhum servidor."

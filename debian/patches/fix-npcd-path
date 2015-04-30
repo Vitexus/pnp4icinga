@@ -1,0 +1,24 @@
+Description: Fix perfdata paths in npcd.cfg.
+Author: Sven Velt <sven@velt.de>
+Forwarded: not-needed
+
+--- a/sample-config/pnp/npcd.cfg-sample.in
++++ b/sample-config/pnp/npcd.cfg-sample.in
+@@ -76,7 +76,7 @@
+ # perfdata_spool_dir = </path/to/directory/>
+ #
+ 
+-perfdata_spool_dir = @PERFDATA_SPOOL_DIR@/
++perfdata_spool_dir = @PERFDATA_SPOOL_DIR@/npcd/
+ 
+ 
+ # Execute following command for each found file
+@@ -163,7 +163,7 @@
+ # perfdata_file = </path/to/file>
+ #
+ 
+-perfdata_file = @localstatedir@/perfdata.dump
++perfdata_file = @PERFDATA_SPOOL_DIR@/nagios/perfdata.dump
+ 
+ 
+ # perfdata_spool_filename - declare the destination

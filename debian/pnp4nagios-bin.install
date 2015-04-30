@@ -1,0 +1,12 @@
+etc/pnp4nagios/nagios.cfg
+etc/pnp4nagios/check_commands/
+etc/pnp4nagios/*.cfg
+usr/lib/pnp4nagios/
+../../scripts/verify_pnp_config_v2.pl /usr/lib/pnp4nagios/libexec/
+usr/sbin/npcd
+usr/share/doc/pnp4nagios/examples/*.cfg
+usr/share/doc/pnp4nagios/examples/check_commands/
+usr/share/man/man8/npcd.8
+var/log/pnp4nagios/stats/
+var/lib/pnp4nagios/perfdata/
+var/spool/pnp4nagios/

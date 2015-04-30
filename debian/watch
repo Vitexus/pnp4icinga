@@ -1,0 +1,4 @@
+version=3
+
+opts="uversionmangle=s/\.rc/~rc/" \
+http://sf.net/pnp4nagios//pnp4nagios-(.+)\.tar\.gz

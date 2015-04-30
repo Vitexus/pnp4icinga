@@ -1,0 +1,14 @@
+etc/pnp4nagios/apache.conf
+etc/pnp4nagios/background.pdf
+etc/pnp4nagios/templates/
+etc/pnp4nagios/templates.d/
+etc/pnp4nagios/pages/
+etc/pnp4nagios/templates.special/
+etc/pnp4nagios/pnp4nagios_release
+etc/pnp4nagios/config.php
+usr/share/doc/pnp4nagios/examples/templates.special/
+usr/share/doc/pnp4nagios/examples/pages/
+usr/share/doc/pnp4nagios/examples/ssi/
+usr/share/pnp4nagios/html/
+var/log/pnp4nagios/kohana/
+var/lib/pnp4nagios/

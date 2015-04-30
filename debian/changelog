@@ -1,0 +1,143 @@
+pnp4nagios (0.6.16-2) unstable; urgency=low
+
+  * debian/control:
+    - Adapted versioned build-dep on libjs-jquery-ui to the workaround used by
+      that package (1.8.14 -> 1.8.ooops.14). Thanks to Christoph Anton
+      Mitterer for reporting this (Closes: #683100).
+  * debian/patches/:
+    - adjust-template-path: Fixed the patch for empty templates.d and some
+      versions of glob() which in this case returns nothing resulting in PHP
+      syntax errors and a crash of PNP4Nagios; thanks to Christoph Anton
+      Mitterer for reporting this and pointing out a fix (Closes: #683138).
+
+ -- Sebastian Harl <tokkee@debian.org>  Sat, 24 Nov 2012 15:34:54 +0100
+
+pnp4nagios (0.6.16-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control:
+    - Depend on jQuery >= 1.6.2 and jQuery-ui >= 1.8.14 (rather than
+      unversioned dependencies); this is what upstream did as well.
+  * debian/rules:
+    - Added recommended targets build-{arch,indep} depending on build-stamp.
+  * debian/pnp4nagios-bin.install:
+    - Install verify_pnp_config_v2.pl to /u/l/pnp4nagios/libexec/.
+  * debian/pnp4nagios-web.postinst:
+    - Call a2mod / restart apache2 only if the binaries are available; thanks
+      to Wouter Schoot for reporting this (Closes: #636218).
+  * debian/po/:
+    - Added Spanish debconf translations; thanks to Camaleón for providing
+      those (Closes: #632953).
+    - Added Portuguese debconf translations; thanks to Pedro Ribeiro for
+      providing those (Closes: #651432).
+    - Added Dutch debconf translations; thanks to Jeroen Schot for providing
+      those (Closes: #654214).
+    - Added Danish debconf translations; thanks to Joe Dalton for providing
+      those (Closes: #654816).
+    - Added Czech debconf translations; thanks to Michal Šimůnek for providing
+      those (Closes: #655132).
+  * debian/README.Debian:
+    - Added a note about installation with Icinga referring to the different
+      htpasswd.users file location; thanks to Alexander Reichle-Schmehl for
+      reporting this (Closes: #646587).
+  * debian/patches/adjust-template-path:
+    - Added support for /etc/pnp4nagios/templates.d.
+  * debian/README.templates.d:
+    - Added README file for the use of /etc/pnp4nagios/templates.d. The file
+      will be installed to that directory.
+
+ -- Sebastian Harl <tokkee@debian.org>  Tue, 31 Jan 2012 14:00:47 +0100
+
+pnp4nagios (0.6.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/README.Debian:
+    - Added more verbose instructions about how to setup mod_gearman mode.
+  * debian/patches/:
+    - Removed manpage-hyphen -- applied upstream.
+  * debian/rules:
+    - Don't remove scripts/rc.pnp_gearman_worker in 'clean' -- this is now
+      taken care of in the upstream Makefile.
+  * debian/po/:
+    - Added Japanese debconf translation; thanks to Hideki Yamane for
+      providing the translation (Closes: #626386).
+    - Added Swedish debconf translation; thanks to Martin Bagge for providing
+      the translation (Closes: #628926).
+  * debian/control:
+    - Updated standards-version to 3.9.2 -- no changes.
+
+ -- Sebastian Harl <tokkee@debian.org>  Wed, 22 Jun 2011 12:42:18 +0200
+
+pnp4nagios (0.6.12-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/:
+    - Removed raise-process-perfdata-timeout -- a similar patch has been
+      included upstream.
+    - Added manpage-hyphen -- do not use hyphens as minus sign in npcd.8.
+  * debian/rules:
+    - npcd.cfg and process_perfdata.cfg are not longer installed as sample
+      configs by the upstream Makefile; so, don't rename those files.
+    - Do not pass --prefix to configure and set man-/infodir correctly. The
+      prefix is set by layout=debian and cannot be overwritten, thus do not
+      pretend this is possible. Also, do not use $prefix when setting man-/
+      infodir but specify the complete path.
+    - Do not install config_local.php and config.php.$PKG_VERSION.
+    - Remove generated scripts/rc.pnp_gearman_worker in 'clean'.
+  * debian/rules, debian/pnp4nagios-bin.install:
+    - Do not install npcd.8 using dh_installman; this is done by the upstream
+      Makefile now.
+  * debian/pnp4nagios-bin.pnp_gearman_worker.default,
+    pnp4nagios-bin.pnp_gearman_worker.init:
+    - Added init script for the PNP4Nagios Gearman worker daemon.
+    - The daemon is disabled by default.
+
+ -- Sebastian Harl <tokkee@debian.org>  Wed, 27 Apr 2011 09:05:48 +0200
+
+pnp4nagios (0.6.11-2) unstable; urgency=low
+
+  * debian/po/:
+    - Added French debconf translation; thanks to Christian Perrier for
+      providing the translation (Closes: #623181).
+    - Added German debconf translation.
+    - Added Russian debconf translation; thanks to Yuri Kozlov for providing
+      the translation (Closes: #623798).
+  * debian/pnp4nagios-web.postinst:
+    - Do not set permissions of /var/log/pnp4nagios/stats -- this is done in
+      pnp4nagios-bin.postinst which ships the directory. This fixes an error
+      when installing -web without -bin.
+
+ -- Sebastian Harl <tokkee@debian.org>  Tue, 26 Apr 2011 11:48:54 +0200
+
+pnp4nagios (0.6.11-1) unstable; urgency=low
+
+  [ Sven Velt ]
+  * Initial release (Closes: #479031)
+  * Use "php-fpdf", "php-fpdf-tpl" and "php-fpdi" packages instead of bundled
+    copies.
+  * Do not use the bundled copy of Kohana2 but rather depend on
+    libkohana2-php.
+  * Ship all configuration in /etc and create appropriate symlinks.
+  * Ship upstream sample configs as default configs.
+  * debian/patches:
+    - Added adjust-template-path: install templates into /etc/ rather than
+      /usr/share/.
+    - Added apache-fix-path-to-userfile: fix config directory in the sample
+      httpd.conf.
+    - Added fix-nagios-url: fix cgi-bin path in config.php.
+    - Added fix-npcd-path: fix perfdata paths in npcd.cfg.
+    - Added fix-path-fpdi: FPDI is shipped in its own subdirectory -- adopt
+      path in pdf.php.
+    - Added raise-process-perfdata-timeout: set timeout to 10s in
+      process_perfdata.cfg; in large and/or virtualized setups, 5s might not
+      be enough.
+
+  [ Sebastian Harl ]
+  * Build the following binary packages:
+    - pnp4nagios-bin: NPCD and process_perfdata.pl
+    - pnp4nagios-web: web interface
+    - pnp4nagios: metapackage depending on the other two
+  * debian/watch: mangle upstream version to replace ".rc" with "~rc".
+  * Make Apache2 configuration optional using debconf.
+
+ -- Sebastian Harl <tokkee@debian.org>  Mon, 14 Feb 2011 13:15:46 +0100

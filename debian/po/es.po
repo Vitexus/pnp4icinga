@@ -1,0 +1,64 @@
+# pnp4nagios po-debconf translation to Spanish
+# Copyright (C) 2010 Software in the Public Interest
+# This file is distributed under the same license as the pnp4nagios package.
+#
+# Changes:
+# - Initial translation
+# Camaleón <noelamac@gmail.com>, 2011
+#
+# - Updates
+#
+#
+# Traductores, si no conocen el formato PO, merece la pena leer la
+# documentación de gettext, especialmente las secciones dedicadas a este
+# formato, por ejemplo ejecutando:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+#
+# Equipo de traducción al español, por favor lean antes de traducir
+# los siguientes documentos:
+#
+# - El proyecto de traducción de Debian al español
+# http://www.debian.org/intl/spanish/
+# especialmente las notas y normas de traducción en
+# http://www.debian.org/intl/spanish/notas
+#
+# - La guía de traducción de po's de debconf:
+# /usr/share/doc/po-debconf/README-trans
+# o http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pnp4nagios 0.6.13-1\n"
+"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"POT-Creation-Date: 2011-02-10 12:58+0100\n"
+"PO-Revision-Date: 2011-06-27 13:30+0200\n"
+"Last-Translator: Camaleón <noelamac@gmail.com>\n"
+"Language-Team: Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Web servers to configure for PNP4Nagios:"
+msgstr "Servidores web a configurar para PNP4Nagios:"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4Nagios."
+msgstr ""
+"Seleccione los servidores web que se deberían configurar para PNP4Nagios."
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid ""
+"If you would prefer to perform configuration manually, leave all servers "
+"unselected."
+msgstr ""
+"Si prefiere llevar a cabo una configuración manual, no seleccione ningún "
+"servidor."

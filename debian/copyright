@@ -1,0 +1,550 @@
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=166
+Upstream-Name: PNP4Nagios
+Upstream-Contact: Jörg Linge <pitchfork@pnp4nagios.org>
+Source: http://docs.pnp4nagios.org/pnp-0.6/about#download
+
+Files: *
+Copyright:
+ 2005-2011 Jörg Linge <pitchfork@pnp4nagios.org>
+License: GPL-2+
+Comment: See the file THANKS for a list of contributors.
+
+Files:
+ helpers/w2h.pl.in
+ scripts/verify_pnp_config.pl.in
+Copyright:
+ 2008-2010 Wolfgang Nieder
+License: GPL-2+
+
+Files: include/*
+Copyright:
+ 1999-2008 Ethan Galstad <nagios@nagios.org>
+License: GPL-2
+
+Files: include/npcdmod.h
+Copyright:
+ 2008 Hendrik Baecker
+License: GPL-2
+
+Files: lib/kohana/*
+Copyright:
+ 2007-2009 Kohana Team
+License: BSD-3-clause
+Comment: See <http://kohanaframework.org/team> for the list of team members.
+
+Files:
+ lib/kohana/system/core/utf8.php
+ lib/kohana/system/core/utf8/*
+Copyright:
+ 2007, Kohana Team
+ 2005, Harry Fuecks
+License: LGPL-2.1
+
+Files: lib/kohana/system/fonts/*
+Copyright:
+ 2003, Bitstream, Inc.
+ 2006, Tavmjong Bah.
+License: fonts-copyright
+
+Files: lib/kohana/system/libraries/drivers/Database/Pdosqlite.php
+Copyright:
+ Doutu
+ Greg MacLellan
+License: BSD-3-clause
+
+File: scripts/verify_pnp_config_v2.pl
+Copyright:
+ 2005-2011, PNP4Nagios Developer Team
+License: GPL-2+
+
+Files: share/pnp/templates.dist/check_apachestatus.php
+Copyright:
+ Roman Ovchinnikov <coolthecold@gmail.com>
+License: GPL-2+
+
+Files: share/pnp/templates.dist/check_ntp_time.php
+Copyright:
+ Mathias Kettner
+License: GPL-2+
+
+Files: share/pnp/templates.dist/check_esx3.php
+Copyright:
+ 2009 op5 AB (author: Mattias Ryrlen <dev@op5.com>)
+ Joerg Linge <joerg.linge@pnp4nagios.org>
+License: GPL-2
+
+Files: share/pnp/templates.dist/check_messpc_temp.php
+Copyright:
+ Joerg Peter Geissler <lairdofglencairn@nagios-wiki.de>
+License: GPL-2+
+
+Files: check_mssql_health.php
+Copyright:
+ 2009-2011 Gerhard Lausser <gerhard.lausser@consol.de>
+ 2011 Joerg Linge <support@pnp4nagios.org>
+License: GPL-2+
+
+Files: share/pnp/templates.dist/check_multi_nagiostats.php
+Copyright:
+ 2009 Matthias Flacke
+License: GPL-2+
+
+Files: share/pnp/templates.dist/check_mysql_health.php
+Copyright:
+ 2009 Gerhard Lausser <gerhard.lausser@consol.de>
+License: GPL-2+
+
+Files: share/pnp/templates.dist/check_openmanage.php
+Copyright:
+ 2008-2011 Trond Hasle Amundsen <t.h.amundsen@usit.uio.no>
+License: GPL-3+
+
+Files: share/pnp/application/lib/json.php
+Copyright:
+ 2005 Michal Migurski <mike-json@teczno.com>
+ Matt Knapp <mdknapp@gmail.com>
+ Brett Stimmerman <brettstimmerman@gmail.com>
+License: BSD-2-clause
+
+Files: share/pnp/application/vendor/fpdf/*
+Copyright:
+ 2008 Olivier Plathey <olivier@fpdf.org>
+License: FPDF-license
+
+Files:
+ share/pnp/application/vendor/fpdf/fpdf_tpl.php
+ share/pnp/application/vendor/fpdf/fpdi*
+ share/pnp/application/vendor/fpdf/pdf_context.php
+ share/pnp/application/vendor/fpdf/pdf_parser.php
+ share/pnp/application/vendor/fpdf/filters/*
+Copyright:
+ 2004-2009 Setasign - Jan Slabon
+License: Apache-2.0
+
+Files:
+ share/pnp/media/css/jquery.mobile.min.css
+ share/pnp/media/js/jquery.mobile.min.js
+Copyright:
+ 2010 jQuery Project
+License: MIT and GPL-2+
+
+Files:
+ share/pnp/media/js/jquery.imgareaselect.min.js
+Copyright:
+ 2008-2011 Michal Wojciechowski (odyniec.net)
+License: MIT and GPL-2+
+
+Files:
+ share/pnp/media/js/jquery-ui.min.js
+ share/pnp/media/css/ui-*
+Copyright:
+ 2010-2011 Brandon Aaron
+ 2010-2011 Paul Bakaus (paulbakaus.com)
+ 2010-2011 David Bolter
+ 2010-2011 Rich Caloggero
+ 2010-2011 Chi Cheng (cloudream@gmail.com)
+ 2010-2011 Colin Clark (http://colin.atrc.utoronto.ca/)
+ 2010-2011 Michelle D'Souza
+ 2010-2011 Aaron Eisenberger (aaronchi@gmail.com)
+ 2010-2011 Ariel Flesler
+ 2010-2011 Bohdan Ganicky
+ 2010-2011 Scott González
+ 2010-2011 Marc Grabanski (m@marcgrabanski.com)
+ 2010-2011 Klaus Hartl (stilbuero.de)
+ 2010-2011 Scott Jehl
+ 2010-2011 Cody Lindley
+ 2010-2011 Eduardo Lundgren (eduardolundgren@gmail.com)
+ 2010-2011 Todd Parker
+ 2010-2011 John Resig
+ 2010-2011 Patty Toland
+ 2010-2011 Ca-Phun Ung (yelotofu.com)
+ 2010-2011 Keith Wood (kbwood@virginbroadband.com.au)
+ 2010-2011 Maggie Costello Wachs
+ 2010-2011 Richard D. Worth (rdworth.org)
+ 2010-2011 Jörn Zaefferer (bassistance.de)
+License: MIT and GPL-2+
+
+Files:
+ share/pnp/media/js/jquery-ui-timepicker-addon.js
+Copyright:
+ 2011 Trent Richardson
+License: MIT and GPL-2+
+
+Files: share/pnp/media/js/jquery.cluetip.js
+Copyright:
+ 2009 Karl Swedberg
+License: MIT and GPL-2+
+Comment: Copyright and license extracted from upstream website and sources.
+
+Files: share/pnp/media/js/jquery-min.js
+Copyright:
+ 2010-2011 John Resig
+ 2010-2011 The Dojo Foundation
+License: MIT and BSD-3-clause and GPL-2+
+Comment: License details extracted from upstream website.
+
+Files: src/*
+Copyright:
+ 2006-2010 Hendrik Baecker <andurin@process-zero.de>
+License: GPL-2
+
+Files: src/utils.c
+Copyright:
+ 2006-2009 Hendrik Baecker <andurin@process-zero.de>
+ 1999-2006 Ethan Galstad <nagios@nagios.org>
+License: GPL-2
+
+Files: debian/*
+Copyright:
+ 2009-2011, Sven Velt <sven@velt.de>
+ 2011, Sebastian Harl <tokkee@debian.org>
+License: BSD-2-clause
+
+Files:
+ debian/pnp4nagios-bin.npcd.init
+Copyright:
+ 2007 Javier Fernandez-Sanguino <jfs@debian.org>
+ 2009 Sven Velt <sven@velt.de>
+License: BSD-2-clause
+
+Files:
+ debian/pnp4nagios-bin.pnp_gearman_worker.init
+Copyright:
+ 2007, Javier Fernandez-Sanguino <jfs@debian.org>
+ 2011, Sebastian Harl <tokkee@debian.org>
+License: BSD-2-clause
+
+Files:
+ debian/po/cs.po
+Copyright:
+ 2012, Michal Šimůnek <michal.simunek@gmail.com>
+License: BSD-2-clause
+
+Files:
+ debian/po/da.po
+Copyright:
+ 2012, Joe Hansen <joedalton2@yahoo.dk>
+License: BSD-2-clause
+
+Files:
+ debian/po/de.po
+Copyright:
+ 2011, Sebastian Harl <tokkee@debian.org>
+ Based on the German nagios3/httpd translation by Matthias Julius <mdeb@julius-net.net>
+License: BSD-2-clause
+
+Files:
+ debian/po/es.po
+Copyright:
+ 2010, Software in the Public Interest
+License: BSD-2-clause
+
+Files:
+ debian/po/fr.po
+Copyright:
+ 2011, Debian French l10n team <debian-l10n-french@lists.debian.org>
+ Written by Christian Perrier <bubulle@debian.org>
+License: BSD-2-clause
+
+Files:
+ debian/po/ja.po
+Copyright:
+ 2011, Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+ Written by Hideki Yamane <henrich@debian.org>
+License: BSD-2-clause
+
+Files:
+ debian/po/nl.po
+Copyright:
+ 2012, Jeroen Schot <schot@a-eskwadraat.nl>
+License: BSD-2-clause
+
+Files:
+ debian/po/pt.po
+Copyright:
+ 2011, Pedro Ribeiro <p.m42.ribeiro@gmail.com>
+License: BSD-2-clause
+
+Files:
+ debian/po/ru.po
+Copyright:
+ 2011, Debian Russian l10n team <debian-l10n-russian@lists.debian.org>
+ Written by Yuri Kozlov <yuray@komyakino.ru>
+License: BSD-2-clause
+
+Files:
+ debian/po/sv/po
+Copyright:
+ 2011, Martin Bagge <brother@bsnet.se>
+License: BSD-2-clause
+
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+     http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the full text of the Apache License, Version 2.0
+ can be found in the file `/usr/share/common-licenses/Apache-2.0'.
+
+License: BSD-3-clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+    *  Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+ .
+    *  Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+ .
+    *  Neither the name of the Kohana nor the names of its contributors may
+       be used to endorse or promote products derived from this software
+       without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-2-clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+    1. Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+ .
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR
+ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 2.1 can be found in the file
+ `/usr/share/common-licenses/LGPL-2.1'.
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; version 2.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ .
+ On Debian systems, the full text of the GNU General Public License version 2
+ can be found in the file `/usr/share/common-licenses/GPL-2'. The latest
+ version of the library can be found in the file
+ `/usr/share/common-licenses/GPL'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; either version 2
+ of the License, or (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ .
+ On Debian systems, the full text of the GNU General Public License version 2
+ can be found in the file `/usr/share/common-licenses/GPL-2'. The latest
+ version of the library can be found in the file
+ `/usr/share/common-licenses/GPL'.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+License: FPDF-license
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software to use, copy, modify, distribute, sublicense, and/or sell
+ copies of the software, and to permit persons to whom the software is
+ furnished to do so.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED.
+
+License: fonts-copyright
+ Fonts are (c) Bitstream (see below). DejaVu changes are in public domain.
+ Glyphs imported from Arev fonts are (c) Tavmjong Bah (see below)
+ .
+ Bitstream Vera Fonts Copyright
+ ------------------------------
+ .
+ Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is
+ a trademark of Bitstream, Inc.
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of the fonts accompanying this license ("Fonts") and associated
+ documentation files (the "Font Software"), to reproduce and distribute the
+ Font Software, including without limitation the rights to use, copy, merge,
+ publish, distribute, and/or sell copies of the Font Software, and to permit
+ persons to whom the Font Software is furnished to do so, subject to the
+ following conditions:
+ .
+ The above copyright and trademark notices and this permission notice shall
+ be included in all copies of one or more of the Font Software typefaces.
+ .
+ The Font Software may be modified, altered, or added to, and in particular
+ the designs of glyphs or characters in the Fonts may be modified and
+ additional glyphs or characters may be added to the Fonts, only if the fonts
+ are renamed to names not containing either the words "Bitstream" or the word
+ "Vera".
+ .
+ This License becomes null and void to the extent applicable to Fonts or Font
+ Software that has been modified and is distributed under the "Bitstream
+ Vera" names.
+ .
+ The Font Software may be sold as part of a larger software package but no
+ copy of one or more of the Font Software typefaces may be sold by itself.
+ .
+ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT,
+ TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME
+ FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING
+ ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+ THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE
+ FONT SOFTWARE.
+ .
+ Except as contained in this notice, the names of Gnome, the Gnome
+ Foundation, and Bitstream Inc., shall not be used in advertising or
+ otherwise to promote the sale, use or other dealings in this Font Software
+ without prior written authorization from the Gnome Foundation or Bitstream
+ Inc., respectively. For further information, contact: fonts at gnome dot
+ org.
+ .
+ Arev Fonts Copyright
+ ------------------------------
+ .
+ Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved.
+ .
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of the fonts accompanying this license ("Fonts") and
+ associated documentation files (the "Font Software"), to reproduce
+ and distribute the modifications to the Bitstream Vera Font Software,
+ including without limitation the rights to use, copy, merge, publish,
+ distribute, and/or sell copies of the Font Software, and to permit
+ persons to whom the Font Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright and trademark notices and this permission notice
+ shall be included in all copies of one or more of the Font Software
+ typefaces.
+ .
+ The Font Software may be modified, altered, or added to, and in
+ particular the designs of glyphs or characters in the Fonts may be
+ modified and additional glyphs or characters may be added to the
+ Fonts, only if the fonts are renamed to names not containing either
+ the words "Tavmjong Bah" or the word "Arev".
+ .
+ This License becomes null and void to the extent applicable to Fonts
+ or Font Software that has been modified and is distributed under the
+ "Tavmjong Bah Arev" names.
+ .
+ The Font Software may be sold as part of a larger software package but
+ no copy of one or more of the Font Software typefaces may be sold by
+ itself.
+ .
+ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+ OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL
+ TAVMJONG BAH BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+ OTHER DEALINGS IN THE FONT SOFTWARE.
+ .
+ Except as contained in this notice, the name of Tavmjong Bah shall not
+ be used in advertising or otherwise to promote the sale, use or other
+ dealings in this Font Software without prior written authorization
+ from Tavmjong Bah. For further information, contact: tavmjong @ free
+ . fr.

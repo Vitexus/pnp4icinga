@@ -1,0 +1,38 @@
+# Copyright (C) 2011 Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+# This file is distributed under the same license as the pnp4nagios package.
+# Hideki Yamane <henrich@debian.org>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pnp4nagios 0.6.12-1\n"
+"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"POT-Creation-Date: 2011-02-10 12:58+0100\n"
+"PO-Revision-Date: 2011-05-01 07:26+0900\n"
+"Last-Translator: Hideki Yamane <henrich@debian.org>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Web servers to configure for PNP4Nagios:"
+msgstr "PNP4Nagios 用に設定するウェブサーバ:"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4Nagios."
+msgstr "PNP4Nagios 用に設定するウェブサーバを選択してください。"
+
+#. Type: multiselect
+#. Description
+#: ../pnp4nagios-web.templates:1001
+msgid ""
+"If you would prefer to perform configuration manually, leave all servers "
+"unselected."
+msgstr ""
+"手動で設定をしたい場合には、どのサーバも選ばないでください。"
+

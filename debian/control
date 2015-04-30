@@ -1,0 +1,61 @@
+Source: pnp4nagios
+Section: net
+Priority: optional
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Uploaders: Sebastian Harl <tokkee@debian.org>, Sven Velt <sven@velt.de>
+Build-Depends: autotools-dev, debhelper (>= 7), po-debconf, quilt,
+ rrdtool, librrds-perl
+Standards-Version: 3.9.2
+Homepage: http://www.pnp4nagios.org/
+Vcs-Git: git://git.debian.org/pkg-nagios/pkg-pnp4nagios.git
+Vcs-Browser: http://git.debian.org/?p=pkg-nagios/pkg-pnp4nagios.git
+
+Package: pnp4nagios
+Architecture: all
+Depends: pnp4nagios-bin, pnp4nagios-web, ${misc:Depends}
+Description: Nagios addon to create graphs from performance data
+ PNP is a graphing tool for Nagios that analyzes performance data provided by
+ plugins and stores them automatically into Round Robin Databases (RRD). It
+ fully integrates itself into the Nagios Monitoring Website.
+ .
+ PNP's goal is to be easily configurable and maintainable.
+ .
+ This is a metapackage depending on all parts of PNP4Nagios.
+
+Package: pnp4nagios-bin
+Architecture: any
+Depends: librrds-perl, adduser, ${shlibs:Depends}, ${misc:Depends}
+Recommends: pnp4nagios-web, nagios3 | icinga
+Suggests: rrdcached, perl, libgearman-client-perl, libcrypt-rijndael-perl
+Description: Nagios addon to create graphs from performance data (binaries)
+ PNP is a graphing tool for Nagios that analyzes performance data provided by
+ plugins and stores them automatically into Round Robin Databases (RRD). It
+ fully integrates itself into the Nagios Monitoring Website.
+ .
+ PNP's goal is to be easily configurable and maintainable. It supports several
+ modes of operation. When using the Gearman mode, some additional Perl modules
+ are required: Gearman::Worker, MIME::Base64, and Crypt::Rijndael which are
+ available in the libgearman-client-perl, perl, and libcrypt-rijndael-perl
+ packages.
+ .
+ This package contains the NPCD-related binaries and process_perfdata.pl.
+
+Package: pnp4nagios-web
+Architecture: all
+Depends: libapache2-mod-php5 | php5, php5-gd,
+ libkohana2-php,
+ libfpdi-php,
+ libjs-jquery (>= 1.6.2), libjs-jquery-ui (>= 1.8.ooops.14),
+ rrdtool,
+ adduser,
+ ${misc:Depends}
+Recommends: pnp4nagios-bin
+Suggests: rrdcached
+Description: Nagios addon to create graphs from performance data (web interface)
+ PNP is a graphing tool for Nagios that analyzes performance data provided by
+ plugins and stores them automatically into Round Robin Databases (RRD). It
+ fully integrates itself into the Nagios Monitoring Website.
+ .
+ PNP's goal is to be easily configurable and maintainable.
+ .
+ This package contains the web-interface for PNP4Nagios.

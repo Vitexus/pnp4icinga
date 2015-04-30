@@ -1,0 +1,15 @@
+Description: Fix cgi-bin path in config.php.
+Author: Sven Velt <sven@velt.de>
+Forwarded: not-needed
+
+--- a/sample-config/pnp/config.php.in
++++ b/sample-config/pnp/config.php.in
+@@ -73,7 +73,7 @@
+ #
+ # Link back to Nagios or Thruk ( www.thruk.org ) 
+ #
+-$conf['nagios_base'] = "/nagios/cgi-bin";
++$conf['nagios_base'] = "/icinga/cgi-bin/";
+ 
+ #
+ # Link back to check_mk´s multisite ( http://mathias-kettner.de/checkmk_multisite.html )

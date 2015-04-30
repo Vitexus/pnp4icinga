@@ -1,0 +1,15 @@
+Description: FPDI is shipped in its own subdirectory -- adopt path in pdf.php.
+Author: Sven Velt <sven@velt.de>
+Forwarded: not-needed
+
+--- a/share/pnp/application/controllers/pdf.php
++++ b/share/pnp/application/controllers/pdf.php
+@@ -267,7 +267,7 @@
+ *
+ */
+ require Kohana::find_file('vendor/fpdf', 'fpdf');
+-require Kohana::find_file('vendor/fpdf', 'fpdi');
++require Kohana::find_file('vendor/fpdi', 'fpdi');
+ class PDF extends FPDI {
+         //Page header
+         function Header() {
