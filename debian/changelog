@@ -1,4 +1,9 @@
 pnp4icinga (0.6.24-3) unstable; urgency=low
+  * Fix config
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Thu, 30 Apr 2015 17:38:49 +0200
+
+pnp4icinga (0.6.24-3) unstable; urgency=low
   * Added conflict info for pnp4nagios
 
  -- Vítězslav Dvořák <info@vitexsoftware.cz>  Thu, 30 Apr 2015 17:23:49 +0200
