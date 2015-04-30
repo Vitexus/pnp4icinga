@@ -13,6 +13,7 @@ Vcs-Browser: http://git.debian.org/?p=pkg-nagios/pkg-pnp4icinga.git
 Package: pnp4icinga
 Architecture: all
 Depends: pnp4icinga-bin, pnp4icinga-web, ${misc:Depends}
+Conflicts: pnp4nagios-bin
 Description: Nagios addon to create graphs from performance data
  PNP is a graphing tool for Nagios that analyzes performance data provided by
  plugins and stores them automatically into Round Robin Databases (RRD). It
