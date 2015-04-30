@@ -1,3 +1,9 @@
+pnp4icinga (0.6.24-1) unstable; urgency=low
+  * debian/
+    - Adapted to Icinga/Jessie
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wen, 30 Apr 2015 12:40:54 +0100
+
 pnp4nagios (0.6.16-2) unstable; urgency=low
 
   * debian/control:

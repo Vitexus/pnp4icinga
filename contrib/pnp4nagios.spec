@@ -41,7 +41,7 @@ make %{?_smp_mflags} all
 
 %install
 rm -rf %{buildroot}
-%{__mkdir} -p  %{buildroot}%{_sysconfdir}/httpd/conf.d/
+%{__mkdir} -p  %{buildroot}%{_sysconfdir}/httpd/conf-available/
 make fullinstall DESTDIR=%{buildroot}
 mv %{buildroot}%{_sysconfdir}/%{name}/check_commands/check_nwstat.cfg-sample %{buildroot}%{_sysconfdir}/%{name}/check_commands/check_nwstat.cfg
 mv %{buildroot}%{_sysconfdir}/%{name}/pages/web_traffic.cfg-sample %{buildroot}%{_sysconfdir}/%{name}/pages/web_traffic.cfg
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/%{name}/pages/web_traffic.cfg
 %config(noreplace) %{_sysconfdir}/%{name}/process_perfdata.cfg
 %config(noreplace) %{_sysconfdir}/%{name}/rra.cfg
-%config(noreplace) %{_sysconfdir}/httpd/conf.d/%{name}.conf
+%config(noreplace) %{_sysconfdir}/httpd/conf-available/%{name}.conf
 %{_sysconfdir}/%{name}/background.pdf
 %{_sysconfdir}/%{name}/config.php
 %{_sysconfdir}/%{name}/misccommands.cfg-sample

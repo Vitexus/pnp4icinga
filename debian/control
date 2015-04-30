@@ -1,36 +1,36 @@
-Source: pnp4nagios
+Source: pnp4icinga
 Section: net
 Priority: optional
-Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Maintainer: Debian icinga Maintainer Group <pkg-icinga-devel@lists.alioth.debian.org>
 Uploaders: Sebastian Harl <tokkee@debian.org>, Sven Velt <sven@velt.de>
 Build-Depends: autotools-dev, debhelper (>= 7), po-debconf, quilt,
  rrdtool, librrds-perl
 Standards-Version: 3.9.2
-Homepage: http://www.pnp4nagios.org/
-Vcs-Git: git://git.debian.org/pkg-nagios/pkg-pnp4nagios.git
-Vcs-Browser: http://git.debian.org/?p=pkg-nagios/pkg-pnp4nagios.git
+Homepage: http://www.pnp4icinga.org/
+Vcs-Git: git://git.debian.org/pkg-icinga/pkg-pnp4icinga.git
+Vcs-Browser: http://git.debian.org/?p=pkg-icinga/pkg-pnp4icinga.git
 
-Package: pnp4nagios
+Package: pnp4icinga
 Architecture: all
-Depends: pnp4nagios-bin, pnp4nagios-web, ${misc:Depends}
-Description: Nagios addon to create graphs from performance data
- PNP is a graphing tool for Nagios that analyzes performance data provided by
+Depends: pnp4icinga-bin, pnp4icinga-web, ${misc:Depends}
+Description: icinga addon to create graphs from performance data
+ PNP is a graphing tool for icinga that analyzes performance data provided by
  plugins and stores them automatically into Round Robin Databases (RRD). It
- fully integrates itself into the Nagios Monitoring Website.
+ fully integrates itself into the icinga Monitoring Website.
  .
  PNP's goal is to be easily configurable and maintainable.
  .
- This is a metapackage depending on all parts of PNP4Nagios.
+ This is a metapackage depending on all parts of PNP4icinga.
 
-Package: pnp4nagios-bin
+Package: pnp4icinga-bin
 Architecture: any
 Depends: librrds-perl, adduser, ${shlibs:Depends}, ${misc:Depends}
-Recommends: pnp4nagios-web, nagios3 | icinga
+Recommends: pnp4icinga-web, icinga3 | icinga
 Suggests: rrdcached, perl, libgearman-client-perl, libcrypt-rijndael-perl
-Description: Nagios addon to create graphs from performance data (binaries)
- PNP is a graphing tool for Nagios that analyzes performance data provided by
+Description: icinga addon to create graphs from performance data (binaries)
+ PNP is a graphing tool for icinga that analyzes performance data provided by
  plugins and stores them automatically into Round Robin Databases (RRD). It
- fully integrates itself into the Nagios Monitoring Website.
+ fully integrates itself into the icinga Monitoring Website.
  .
  PNP's goal is to be easily configurable and maintainable. It supports several
  modes of operation. When using the Gearman mode, some additional Perl modules
@@ -40,7 +40,7 @@ Description: Nagios addon to create graphs from performance data (binaries)
  .
  This package contains the NPCD-related binaries and process_perfdata.pl.
 
-Package: pnp4nagios-web
+Package: pnp4icinga-web
 Architecture: all
 Depends: libapache2-mod-php5 | php5, php5-gd,
  libkohana2-php,
@@ -49,13 +49,13 @@ Depends: libapache2-mod-php5 | php5, php5-gd,
  rrdtool,
  adduser,
  ${misc:Depends}
-Recommends: pnp4nagios-bin
+Recommends: pnp4icinga-bin
 Suggests: rrdcached
-Description: Nagios addon to create graphs from performance data (web interface)
- PNP is a graphing tool for Nagios that analyzes performance data provided by
+Description: icinga addon to create graphs from performance data (web interface)
+ PNP is a graphing tool for icinga that analyzes performance data provided by
  plugins and stores them automatically into Round Robin Databases (RRD). It
- fully integrates itself into the Nagios Monitoring Website.
+ fully integrates itself into the icinga Monitoring Website.
  .
  PNP's goal is to be easily configurable and maintainable.
  .
- This package contains the web-interface for PNP4Nagios.
+ This package contains the web-interface for PNP4icinga.

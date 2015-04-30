@@ -21,11 +21,12 @@ set -e
 
 case "$1" in
 	purge|remove)
-		if [ -d /etc/apache2/conf.d/ ]; then
-			if [ -L /etc/apache2/conf.d/pnp4nagios.cfg ]; then
-				ls -l /etc/apache2/conf.d/pnp4nagios.cfg | grep -q /etc/pnp4nagios/apache.cfg
+		if [ -d /etc/apache2/conf-available/ ]; then
+			if [ -L /etc/apache2/conf-available/pnp4nagios.cfg ]; then
+				a2disconf pnp4nagios
+				ls -l /etc/apache2/conf-available/pnp4nagios.cfg | grep -q /etc/pnp4nagios/apache.cfg
 				if [ $? -eq 0 ]; then
-					rm -f /etc/apache2/conf.d/pnp4nagios.cfg
+					rm -f /etc/apache2/conf-available/pnp4nagios.cfg
 				fi
 			fi
 		fi

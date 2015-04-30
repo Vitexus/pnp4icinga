@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for pnp4nagios-bin
+# postinst script for pnp4nagios-web
 #
 # see: dh_installdeb(1)
 
@@ -17,6 +17,8 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
+. /usr/share/debconf/confmodule
+
 setperm() {
 	user="$1"
 	group="$2"
@@ -30,6 +32,33 @@ setperm() {
 	fi
 }
 
+configure_apache2() {
+	a2reload="false"
+
+	if [ -d /etc/apache2/conf-available/ ]; then
+		if [ ! -e /etc/apache2/conf-available/pnp4nagios.conf ]; then
+			ln -s /etc/pnp4nagios/apache.conf /etc/apache2/conf-available/pnp4nagios.conf
+			a2enconf pnp4nagios
+			a2reload="true"
+		fi
+	fi
+
+	if [ -d /etc/apache2/mods-enabled ]; then
+		if [ ! -e /etc/apache2/mods-enabled/rewrite.load ]; then
+			if [ -x /usr/sbin/a2enmod ]; then
+				a2enmod rewrite
+				a2reload="true"
+			fi
+		fi
+	fi
+
+	if [ "$a2reload" = "true" ]; then
+		if [ -x /etc/init.d/apache2 ]; then
+			service apache2 reload
+		fi
+	fi
+}
+
 case "$1" in
 	configure)
 		if ! getent passwd nagios > /dev/null ; then
@@ -40,16 +69,21 @@ case "$1" in
 		setperm nagios www-data	750 /var/lib/pnp4nagios
 		setperm nagios nagios   755 /var/lib/pnp4nagios/perfdata
 		setperm nagios www-data	750 /var/log/pnp4nagios
-		setperm nagios nagios	750 /var/log/pnp4nagios/stats
-		setperm nagios nagios	770 /var/spool/pnp4nagios
-		setperm nagios nagios	770 /var/spool/pnp4nagios/nagios
-		setperm nagios nagios	770 /var/spool/pnp4nagios/npcd
 
-		if [ -d /etc/nagios3/conf.d/ ]; then
-			if [ ! -e /etc/nagios3/conf.d/pnp4nagios.cfg ]; then
-				ln -s /etc/pnp4nagios/nagios.cfg /etc/nagios3/conf.d/pnp4nagios.cfg
-			fi
-		fi
+		db_get pnp4nagios-web/httpd
+		http_servers=`echo $RET | sed -e 's/,/ /g'`
+
+		for httpd in $http_servers; do
+			case "$httpd" in
+				apache2)
+					configure_apache2
+					;;
+				# WISHLIST: configure other web servers as well
+				*)
+					echo "Don't know how to configure web server $httpd" >&2
+					;;
+			esac
+		done
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)

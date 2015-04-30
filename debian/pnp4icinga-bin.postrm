@@ -21,11 +21,11 @@ set -e
 
 case "$1" in
 	purge|remove)
-		if [ -d /etc/nagios3/conf.d/ ]; then
-			if [ -L /etc/nagios3/conf.d/pnp4nagios.cfg ]; then
-				ls -l /etc/nagios3/conf.d/pnp4nagios.cfg | grep -q /etc/pnp4nagios/nagios.cfg
+		if [ -d /etc/icinga/conf.d/ ]; then
+			if [ -L /etc/icinga/conf.d/pnp4nagios.cfg ]; then
+				ls -l /etc/icinga/conf.d/pnp4nagios.cfg | grep -q /etc/pnp4nagios/nagios.cfg
 				if [ $? -eq 0 ]; then
-					rm -f /etc/nagios3/conf.d/pnp4nagios.cfg
+					rm -f /etc/icinga/conf.d/pnp4nagios.cfg
 				fi
 			fi
 		fi

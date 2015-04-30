@@ -36,7 +36,7 @@ config.status: configure
 				--infodir=/usr/share/info \
 				--without-kohana \
 				--with-kohana_system=/usr/share/php/kohana2/system \
-				--with-httpd-conf=/etc/apache2/conf.d \
+				--with-httpd-conf=/etc/apache2/conf-available \
 				CFLAGS="$(CFLAGS)"
 
 build: build-arch build-indep
