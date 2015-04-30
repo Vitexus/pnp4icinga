@@ -1,0 +1,4 @@
+Please supply a command line argument (i.e. 'make all').  Other targets are:
+   clean
+   install install-init install-config install-processperfdata install-html fullinstall
+   install-plugins

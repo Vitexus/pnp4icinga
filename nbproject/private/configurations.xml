@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="contrib">
+        <df name="ssi">
+        </df>
+      </df>
+      <df name="debian">
+        <df name="check_commands">
+        </df>
+        <df name="patches">
+        </df>
+        <df name="po">
+        </df>
+        <df name="source">
+        </df>
+      </df>
+      <df name="helpers">
+      </df>
+      <df name="include">
+        <in>broker.h</in>
+        <in>common.h</in>
+        <in>config.h</in>
+        <in>global.h</in>
+        <in>locations.h</in>
+        <in>nagios.h</in>
+        <in>nebcallbacks.h</in>
+        <in>nebmodules.h</in>
+        <in>nebstructs.h</in>
+        <in>npcdmod.h</in>
+        <in>objects.h</in>
+        <in>pnp.h</in>
+      </df>
+      <df name="lib">
+        <df name="kohana">
+          <df name="system">
+            <df name="config">
+            </df>
+            <df name="controllers">
+            </df>
+            <df name="core">
+              <df name="utf8">
+              </df>
+            </df>
+            <df name="fonts">
+            </df>
+            <df name="helpers">
+            </df>
+            <df name="i18n">
+              <df name="de_DE">
+              </df>
+              <df name="en_US">
+              </df>
+              <df name="es_ES">
+              </df>
+              <df name="fr_FR">
+              </df>
+              <df name="it_IT">
+              </df>
+              <df name="nl_NL">
+              </df>
+              <df name="ru_RU">
+              </df>
+            </df>
+            <df name="libraries">
+              <df name="drivers">
+                <df name="Cache">
+                </df>
+                <df name="Captcha">
+                </df>
+                <df name="Database">
+                </df>
+                <df name="Image">
+                </df>
+                <df name="Session">
+                </df>
+              </df>
+            </df>
+            <df name="views">
+              <df name="kohana">
+              </df>
+              <df name="pagination">
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="man">
+      </df>
+      <df name="sample-config">
+        <df name="pnp">
+          <df name="check_commands">
+          </df>
+          <df name="pages">
+          </df>
+        </df>
+      </df>
+      <df name="scripts">
+      </df>
+      <df name="share">
+        <df name="pnp">
+          <df name="application">
+            <df name="config">
+            </df>
+            <df name="controllers">
+            </df>
+            <df name="helpers">
+            </df>
+            <df name="i18n">
+              <df name="de_DE">
+              </df>
+              <df name="en_US">
+              </df>
+              <df name="es_ES">
+              </df>
+              <df name="fr_FR">
+              </df>
+              <df name="ru_RU">
+              </df>
+            </df>
+            <df name="lib">
+            </df>
+            <df name="models">
+            </df>
+            <df name="vendor">
+              <df name="fpdf">
+                <df name="filters">
+                </df>
+                <df name="font">
+                </df>
+              </df>
+            </df>
+            <df name="views">
+            </df>
+          </df>
+          <df name="documents">
+            <df name="_media">
+            </df>
+            <df name="de_DE">
+            </df>
+            <df name="en_US">
+            </df>
+            <df name="images">
+              <df name="smileys">
+              </df>
+            </df>
+          </df>
+          <df name="media">
+            <df name="css">
+              <df name="images">
+              </df>
+              <df name="ui-lightness">
+                <df name="images">
+                </df>
+              </df>
+              <df name="ui-multisite">
+                <df name="images">
+                </df>
+              </df>
+              <df name="ui-redmond">
+                <df name="images">
+                </df>
+              </df>
+              <df name="ui-smoothness">
+                <df name="images">
+                </df>
+              </df>
+            </df>
+            <df name="images">
+            </df>
+            <df name="js">
+            </df>
+          </df>
+          <df name="templates.dist">
+          </df>
+          <df name="templates.special">
+          </df>
+        </df>
+      </df>
+      <df name="src">
+        <df name="module">
+          <in>modpnpsender.c</in>
+        </df>
+        <in>config.c</in>
+        <in>logging.c</in>
+        <in>npcd.c</in>
+        <in>npcdmod.c</in>
+        <in>pnpsender.c</in>
+        <in>utils.c</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

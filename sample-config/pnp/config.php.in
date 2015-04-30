@@ -89,7 +89,7 @@ $conf['temp'] = "/var/tmp";
 #
 # Link back to Nagios or Thruk ( www.thruk.org ) 
 #
-$conf['nagios_base'] = "/nagios/cgi-bin";
+$conf['nagios_base'] = "/icinga/cgi-bin/";
 
 #
 # Link back to check_mk´s multisite ( http://mathias-kettner.de/checkmk_multisite.html )
@@ -230,13 +230,19 @@ $conf['RRD_DAEMON_OPTS'] = '';
 # Add your own template directories here
 # First match wins!
 #$conf['template_dirs'][] = '/usr/local/check_mk/pnp-templates';
-$conf['template_dirs'][] = '@datarootdir@/templates';
+$conf['template_dirs'][] = '@sysconfdir@/templates';
+$templates_d = glob("/etc/pnp4nagios/templates.d/*", GLOB_ONLYDIR);
+if (is_array($templates_d) && (count($templates_d) > 0)) {
+	foreach ($templates_d as $dirname) {
+		$conf['template_dirs'][] = "$dirname";
+	}
+}
 $conf['template_dirs'][] = '@datarootdir@/templates.dist';
 
 #
 # Directory to search for special templates
 #
-$conf['special_template_dir'] = '@datarootdir@/templates.special';
+$conf['special_template_dir'] = '@sysconfdir@/templates.special';
 
 #
 # Regex to detect mobile devices

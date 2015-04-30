@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="src">
+        <df name="module">
+          <in>modpnpsender.c</in>
+        </df>
+        <in>config.c</in>
+        <in>logging.c</in>
+        <in>npcd.c</in>
+        <in>npcdmod.c</in>
+        <in>pnpsender.c</in>
+        <in>utils.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="src/config.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/logging.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/module/modpnpsender.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/npcd.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/npcdmod.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/pnpsender.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/utils.c" ex="false" tool="0" flavor2="2">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

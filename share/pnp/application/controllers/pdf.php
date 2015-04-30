@@ -259,7 +259,7 @@ class Pdf_Controller extends System_Controller  {
 *
 */
 require Kohana::find_file('vendor/fpdf', 'fpdf');
-require Kohana::find_file('vendor/fpdf', 'fpdi');
+require Kohana::find_file('vendor/fpdi', 'fpdi');
 class PDF extends FPDI {
         //Page header
         function Header() {
