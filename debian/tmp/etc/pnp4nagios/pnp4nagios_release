@@ -1,8 +1,0 @@
-PKG_REL_DATE="03-01-2015"
-PKG_VERSION="0.6.25"
-PKG_NAME="pnp4nagios"
-
-#
-# Configure Arguments
-#
-CONFIGURE_ARGS= '--build' 'x86_64-linux-gnu' '--with-layout=debian' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--without-kohana' '--with-kohana_system=/usr/share/php/kohana2/system' '--with-httpd-conf=/etc/apache2/conf.d' 'CFLAGS=' 'build_alias=x86_64-linux-gnu'
