@@ -47,8 +47,10 @@ Depends: libapache2-mod-php5 | php5, php5-gd,
  libfpdi-php,
  libjs-jquery (>= 1.6.2), libjs-jquery-ui (>= 1.8.ooops.14),
  rrdtool,
+ icinga-web-pnp,
  adduser,
  ${misc:Depends}
+Conflicts: pnp4nagios-web
 Recommends: pnp4icinga-bin
 Suggests: rrdcached
 Description: Nagios addon to create graphs from performance data (web interface)

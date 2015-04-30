@@ -1,3 +1,8 @@
+pnp4icinga (0.6.24-2) unstable; urgency=low
+  * Added dependency to icinga-web-pnp
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Thu, 30 Apr 2015 15:30:49 +0200
+
 pnp4icinga (0.6.24-1) unstable; urgency=low
   * Repacked for Jessie
 
