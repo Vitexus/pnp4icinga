@@ -1,3 +1,8 @@
+pnp4icinga (0.6.24-16) unstable; urgency=low
+  * Update rc.d files another try
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 04 May 2015 15:24:00 +0200
+
 pnp4icinga (0.6.24-15) unstable; urgency=low
   * Update rc.d files second try
 

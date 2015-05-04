@@ -50,7 +50,6 @@ case "$1" in
 				ln -s /etc/pnp4nagios/nagios.cfg /etc/icinga/objects/pnp4nagios.cfg
 			fi
 		fi
-                service npcd start
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)
