@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pnp4icinga\n"
-"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
+"Report-Msgid-Bugs-To: PNP4Icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2012-01-05 17:34+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
@@ -19,14 +19,19 @@ msgstr ""
 #. Type: multiselect
 #. Description
 #: ../pnp4icinga-web.templates:1001
-msgid "Web servers to configure for PNP4icinga:"
+#, fuzzy
+#| msgid "Web servers to configure for PNP4icinga:"
+msgid "Web servers to configure for PNP4Icinga:"
 msgstr "Internetservere at konfigurere for PNP4icinga:"
 
 #. Type: multiselect
 #. Description
 #: ../pnp4icinga-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4icinga."
-msgstr "Vælg venligst hvilke internetservere der skal konfigureres for PNP4icinga."
+#, fuzzy
+#| msgid "Please select which web servers should be configured for PNP4icinga."
+msgid "Please select which web servers should be configured for PNP4Icinga."
+msgstr ""
+"Vælg venligst hvilke internetservere der skal konfigureres for PNP4icinga."
 
 #. Type: multiselect
 #. Description
@@ -35,6 +40,5 @@ msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."
 msgstr ""
-"Hvis du foretrækker at udføre konfigurationen manuelt, så lad alle "
-"serverne være umarkerede."
-
+"Hvis du foretrækker at udføre konfigurationen manuelt, så lad alle serverne "
+"være umarkerede."

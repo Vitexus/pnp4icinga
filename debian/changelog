@@ -1,3 +1,8 @@
+pnp4icinga (0.6.24-11) unstable; urgency=low
+  * Finished renaming debconf variables to pnp4icinga-web/httpd
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 04 May 2015 15:24:00 +0200
+
 pnp4icinga (0.6.24-10) unstable; urgency=low
   * po/mo files update
 

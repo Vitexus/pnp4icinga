@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pnp4icinga 0.6.13-1\n"
-"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
+"Report-Msgid-Bugs-To: PNP4Icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2011-12-06 00:18+0000\n"
 "Last-Translator: Pedro Ribeiro <p.m42.ribeiro@gmail.com>, 2011\n"
@@ -19,13 +19,17 @@ msgstr ""
 #. Type: multiselect
 #. Description
 #: ../pnp4icinga-web.templates:1001
-msgid "Web servers to configure for PNP4icinga:"
+#, fuzzy
+#| msgid "Web servers to configure for PNP4icinga:"
+msgid "Web servers to configure for PNP4Icinga:"
 msgstr "Servidores Web a configurar para o PNP4icinga:"
 
 #. Type: multiselect
 #. Description
 #: ../pnp4icinga-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4icinga."
+#, fuzzy
+#| msgid "Please select which web servers should be configured for PNP4icinga."
+msgid "Please select which web servers should be configured for PNP4Icinga."
 msgstr ""
 "Por favor escolha os servidores web que devem ser configurados para o "
 "PNP4icinga."
@@ -36,5 +40,4 @@ msgstr ""
 msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."
-msgstr ""
-"Se preferir configurar manualmente, não seleccione nenhum servidor."
+msgstr "Se preferir configurar manualmente, não seleccione nenhum servidor."
