@@ -69,6 +69,10 @@ case "$1" in
 		setperm nagios nagios   755 /var/lib/pnp4nagios/perfdata
 		setperm nagios www-data	750 /var/log/pnp4nagios
 
+                sed -i '/IDO2DB/c\IDO2DB=yes' /etc/default/icinga
+                cp /usr/share/doc/icinga-idoutils/examples/idoutils.cfg-sample /etc/icinga/modules/idoutils.cfg
+                service icinga restart
+
 		db_get pnp4nagios-web/httpd
 		http_servers=`echo $RET | sed -e 's/,/ /g'`
 

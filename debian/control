@@ -48,6 +48,7 @@ Depends: libapache2-mod-php5 | php5, php5-gd,
  libfpdi-php,
  libjs-jquery (>= 1.6.2), libjs-jquery-ui (>= 1.8.ooops.14),
  rrdtool,
+ icinga-idoutils,
  icinga-web-pnp,
  adduser,
  ${misc:Depends}

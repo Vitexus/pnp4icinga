@@ -1,3 +1,8 @@
+pnp4icinga (0.6.24-5) unstable; urgency=low
+  * Update ido2db deps & startup
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 04 May 2015 14:00:49 +0200
+
 pnp4icinga (0.6.24-4) unstable; urgency=low
   * Fix config
 
