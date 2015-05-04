@@ -1,3 +1,8 @@
+pnp4icinga (0.6.24-8) unstable; urgency=low
+  * Renamed templates file
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 04 May 2015 14:47:49 +0200
+
 pnp4icinga (0.6.24-7) unstable; urgency=low
   * Added templates file
 
