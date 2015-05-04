@@ -55,10 +55,10 @@ Depends: libapache2-mod-php5 | php5, php5-gd,
 Conflicts: pnp4nagios-web
 Recommends: pnp4icinga-bin
 Suggests: rrdcached
-Description: Nagios addon to create graphs from performance data (web interface)
- PNP is a graphing tool for Nagios that analyzes performance data provided by
- plugins and stores them automatically into Round Robin Databases (RRD). It
- fully integrates itself into the Nagios Monitoring Website.
+Description: Icinga/Nagios addon to create graphs from performance data (web 
+ interface) PNP is a graphing tool for Nagios that analyzes performance data 
+ provided by plugins and stores them automatically into Round Robin Databases 
+ (RRD). It fully integrates itself into the Nagios Monitoring Website.
  .
  PNP's goal is to be easily configurable and maintainable.
  .

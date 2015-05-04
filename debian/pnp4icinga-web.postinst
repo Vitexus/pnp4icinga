@@ -19,6 +19,15 @@ set -e
 
 . /usr/share/debconf/confmodule
 
+ido2db(){
+    service ido2db stop
+    service icinga stop
+    sed -i '/IDO2DB/c\IDO2DB=yes' /etc/default/icinga
+    cp /usr/share/doc/icinga-idoutils/examples/idoutils.cfg-sample /etc/icinga/modules/idoutils.cfg
+    service ido2db start
+    service icinga start
+}
+
 setperm() {
 	user="$1"
 	group="$2"
@@ -35,9 +44,10 @@ setperm() {
 configure_apache2() {
 	a2reload="false"
 
-	if [ -d /etc/apache2/conf.d/ ]; then
-		if [ ! -e /etc/apache2/conf.d/pnp4nagios.conf ]; then
-			ln -s /etc/pnp4nagios/apache.conf /etc/apache2/conf.d/pnp4nagios.conf
+	if [ -d /etc/apache2/conf-available/ ]; then
+		if [ ! -e /etc/apache2/conf-available/pnp4nagios.conf ]; then
+			ln -s /etc/pnp4nagios/apache.conf /etc/apache2/conf-available/pnp4nagios.conf
+                        a2enconf pnp4nagios
 			a2reload="true"
 		fi
 	fi
@@ -69,9 +79,7 @@ case "$1" in
 		setperm nagios nagios   755 /var/lib/pnp4nagios/perfdata
 		setperm nagios www-data	750 /var/log/pnp4nagios
 
-                sed -i '/IDO2DB/c\IDO2DB=yes' /etc/default/icinga
-                cp /usr/share/doc/icinga-idoutils/examples/idoutils.cfg-sample /etc/icinga/modules/idoutils.cfg
-                service icinga restart
+                ido2db
 
 		db_get pnp4icinga-web/httpd
 		http_servers=`echo $RET | sed -e 's/,/ /g'`
