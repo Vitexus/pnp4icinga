@@ -1,3 +1,8 @@
+pnp4icinga (0.6.24-18) unstable; urgency=low
+  * fixed SEDing icinga config  
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 04 May 2015 15:24:00 +0200
+
 pnp4icinga (0.6.24-17) unstable; urgency=low
   * SEDing icinga config 
 
