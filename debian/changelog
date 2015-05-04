@@ -1,3 +1,8 @@
+pnp4icinga (0.6.24-13) unstable; urgency=low
+  * Rename nagios3 htpasswd to icinga one
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 04 May 2015 15:24:00 +0200
+
 pnp4icinga (0.6.24-12) unstable; urgency=low
   * Apache config update
 
