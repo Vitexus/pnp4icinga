@@ -1,6 +1,6 @@
-# pnp4nagios po-debconf translation to Spanish
+# pnp4icinga po-debconf translation to Spanish
 # Copyright (C) 2010 Software in the Public Interest
-# This file is distributed under the same license as the pnp4nagios package.
+# This file is distributed under the same license as the pnp4icinga package.
 #
 # Changes:
 # - Initial translation
@@ -29,8 +29,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pnp4nagios 0.6.13-1\n"
-"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"Project-Id-Version: pnp4icinga 0.6.13-1\n"
+"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2011-06-27 13:30+0200\n"
 "Last-Translator: Camaleón <noelamac@gmail.com>\n"
@@ -42,20 +42,20 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Web servers to configure for PNP4Nagios:"
-msgstr "Servidores web a configurar para PNP4Nagios:"
+#: ../pnp4icinga-web.templates:1001
+msgid "Web servers to configure for PNP4icinga:"
+msgstr "Servidores web a configurar para PNP4icinga:"
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4Nagios."
+#: ../pnp4icinga-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4icinga."
 msgstr ""
-"Seleccione los servidores web que se deberían configurar para PNP4Nagios."
+"Seleccione los servidores web que se deberían configurar para PNP4icinga."
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
+#: ../pnp4icinga-web.templates:1001
 msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."

@@ -1,12 +1,12 @@
-# Dutch translation of pnp4nagios debconf templates.
+# Dutch translation of pnp4icinga debconf templates.
 # Copyright (C) 2012 Jeroen Schot
-# This file is distributed under the same license as the pnp4nagios package.
+# This file is distributed under the same license as the pnp4icinga package.
 # Jeroen Schot <schot@a-eskwadraat.nl>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pnp4nagios 0.6.13-1\n"
-"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"Project-Id-Version: pnp4icinga 0.6.13-1\n"
+"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2012-01-02 14:09+0100\n"
 "Last-Translator: Jeroen Schot <schot@a-eskwadraat.nl>\n"
@@ -18,20 +18,20 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Web servers to configure for PNP4Nagios:"
+#: ../pnp4icinga-web.templates:1001
+msgid "Web servers to configure for PNP4icinga:"
 msgstr "Automatisch te configureren webservers:"
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4Nagios."
+#: ../pnp4icinga-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4icinga."
 msgstr ""
-"Welke webservers moeten automatisch worden geconfigureerd voor PNP4Nagios?"
+"Welke webservers moeten automatisch worden geconfigureerd voor PNP4icinga?"
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
+#: ../pnp4icinga-web.templates:1001
 msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."

@@ -1,11 +1,11 @@
 # Copyright (C) 2011 Debian Russian l10n team <debian-l10n-russian@lists.debian.org>
-# This file is distributed under the same license as the pnp4nagios package.
+# This file is distributed under the same license as the pnp4icinga package.
 #
 # Yuri Kozlov <yuray@komyakino.ru>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: pnp4nagios 0.6.11-1\n"
-"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"Project-Id-Version: pnp4icinga 0.6.11-1\n"
+"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2011-04-23 10:23+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
@@ -20,19 +20,19 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Web servers to configure for PNP4Nagios:"
-msgstr "Веб-серверы для настройки под PNP4Nagios:"
+#: ../pnp4icinga-web.templates:1001
+msgid "Web servers to configure for PNP4icinga:"
+msgstr "Веб-серверы для настройки под PNP4icinga:"
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4Nagios."
-msgstr "Выберите веб-серверы, которые нужно настроить для PNP4Nagios."
+#: ../pnp4icinga-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4icinga."
+msgstr "Выберите веб-серверы, которые нужно настроить для PNP4icinga."
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
+#: ../pnp4icinga-web.templates:1001
 msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."

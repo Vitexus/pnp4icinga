@@ -1,12 +1,12 @@
-# Czech PO debconf template translation of pnp4nagios.
+# Czech PO debconf template translation of pnp4icinga.
 # Copyright (C) 2012 Michal Simunek <michal.simunek@gmail.com>
-# This file is distributed under the same license as the pnp4nagios package.
+# This file is distributed under the same license as the pnp4icinga package.
 # Michal Simunek <michal.simunek@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pnp4nagios\n"
-"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"Project-Id-Version: pnp4icinga\n"
+"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2012-01-08 15:31+0200\n"
 "Last-Translator: Michal Simunek <michal.simunek@gmail.com>\n"
@@ -18,19 +18,19 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Web servers to configure for PNP4Nagios:"
-msgstr "Nastavit webové servery pro PNP4Nagios:"
+#: ../pnp4icinga-web.templates:1001
+msgid "Web servers to configure for PNP4icinga:"
+msgstr "Nastavit webové servery pro PNP4icinga:"
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4Nagios."
-msgstr "Vyberte prosím, které webové servery se mají nastavit pro PNP4Nagios."
+#: ../pnp4icinga-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4icinga."
+msgstr "Vyberte prosím, které webové servery se mají nastavit pro PNP4icinga."
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
+#: ../pnp4icinga-web.templates:1001
 msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."

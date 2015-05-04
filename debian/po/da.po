@@ -1,12 +1,12 @@
-# Danish translation pnp4nagios.
-# Copyright (C) 2012 pnp4nagios & nedenstående oversættere.
-# This file is distributed under the same license as the pnp4nagios package.
+# Danish translation pnp4icinga.
+# Copyright (C) 2012 pnp4icinga & nedenstående oversættere.
+# This file is distributed under the same license as the pnp4icinga package.
 # Joe Hansen <joedalton2@yahoo.dk>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pnp4nagios\n"
-"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"Project-Id-Version: pnp4icinga\n"
+"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2012-01-05 17:34+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
@@ -18,19 +18,19 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Web servers to configure for PNP4Nagios:"
-msgstr "Internetservere at konfigurere for PNP4Nagios:"
+#: ../pnp4icinga-web.templates:1001
+msgid "Web servers to configure for PNP4icinga:"
+msgstr "Internetservere at konfigurere for PNP4icinga:"
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4Nagios."
-msgstr "Vælg venligst hvilke internetservere der skal konfigureres for PNP4Nagios."
+#: ../pnp4icinga-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4icinga."
+msgstr "Vælg venligst hvilke internetservere der skal konfigureres for PNP4icinga."
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
+#: ../pnp4icinga-web.templates:1001
 msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."

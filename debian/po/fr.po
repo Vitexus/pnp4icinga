@@ -1,11 +1,11 @@
 # Copyright (C) 2011 Debian French l10n team <debian-l10n-french@lists.debian.org>
-# This file is distributed under the same license as the pnp4nagios package.
+# This file is distributed under the same license as the pnp4icinga package.
 #
 # Christian Perrier <bubulle@debian.org>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: pnp4nagios\n"
-"Report-Msgid-Bugs-To: pnp4nagios@packages.debian.org\n"
+"Project-Id-Version: pnp4icinga\n"
+"Report-Msgid-Bugs-To: pnp4icinga@packages.debian.org\n"
 "POT-Creation-Date: 2011-02-10 12:58+0100\n"
 "PO-Revision-Date: 2011-04-13 08:54+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Web servers to configure for PNP4Nagios:"
-msgstr "Serveur(s) web à configurer pour PNP4Nagios :"
+#: ../pnp4icinga-web.templates:1001
+msgid "Web servers to configure for PNP4icinga:"
+msgstr "Serveur(s) web à configurer pour PNP4icinga :"
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
-msgid "Please select which web servers should be configured for PNP4Nagios."
-msgstr "Veuillez choisir le(s) serveur(s) web à configurer pour PNP4Nagios."
+#: ../pnp4icinga-web.templates:1001
+msgid "Please select which web servers should be configured for PNP4icinga."
+msgstr "Veuillez choisir le(s) serveur(s) web à configurer pour PNP4icinga."
 
 #. Type: multiselect
 #. Description
-#: ../pnp4nagios-web.templates:1001
+#: ../pnp4icinga-web.templates:1001
 msgid ""
 "If you would prefer to perform configuration manually, leave all servers "
 "unselected."
