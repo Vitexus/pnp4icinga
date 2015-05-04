@@ -19,10 +19,27 @@ set -e
 
 . /usr/share/debconf/confmodule
 
-ido2db(){
+icinga_setup(){
     service ido2db stop
     service icinga stop
     sed -i '/IDO2DB/c\IDO2DB=yes' /etc/default/icinga
+    sed -i '/process_performance_data/c\process_performance_data=1' /etc/icinga/icinga.cfg
+
+    sed -i '/service_perfdata_file_template/c\service_perfdata_file_template=DATATYPE::SERVICEPERFDATA\\tTIMET::\$TIMET\$\\tHOSTNAME::\$HOSTNAME\$\\tSERVICEDESC::\$SERVICEDESC\$\\tSERVICEPERFDATA::\$SERVICEPERFDATA\$\\tSERVICECHECKCOMMAND::\$SERVICECHECKCOMMAND\$\\tHOSTSTATE::\$HOSTSTATE\$\\tHOSTSTATETYPE::\$HOSTSTATETYPE\$\\tSERVICESTATE::\$SERVICESTATE\$\\tSERVICESTATETYPE::\$SERVICESTATETYPE\$' /etc/icinga/icinga.cfg
+    sed -i '/host_perfdata_file_template/c\host_perfdata_file_template=DATATYPE::HOSTPERFDATA\\tTIMET::\$TIMET\$\\tHOSTNAME::\$HOSTNAME\$\\tHOSTPERFDATA::\$HOSTPERFDATA\$\\tHOSTCHECKCOMMAND::\$HOSTCHECKCOMMAND\$\\tHOSTSTATE::\$HOSTSTATE\$\\tHOSTSTATETYPE::\$HOSTSTATETYPE\$' /etc/icinga/icinga.cfg
+
+    sed -i '/service_perfdata_file_mode/c\service_perfdata_file_mode=a' /etc/icinga/icinga.cfg
+    sed -i '/host_perfdata_file_mode/c\host_perfdata_file_mode=a' /etc/icinga/icinga.cfg
+
+    sed -i '/service_perfdata_file_processing_interval/c\service_perfdata_file_processing_interval=30' /etc/icinga/icinga.cfg
+    sed -i '/host_perfdata_file_processing_interval/c\host_perfdata_file_processing_interval=30' /etc/icinga/icinga.cfg
+
+    sed -i '/service_perfdata_file/c\service_perfdata_file=/var/spool/pnp4nagios/nagios/service-perfdata' /etc/icinga/icinga.cfg
+    sed -i '/host_perfdata_file/c\host_perfdata_file=/var/spool/pnp4nagios/nagios/host-perfdata' /etc/icinga/icinga.cfg
+
+    sed -i '/service_perfdata_file_processing_command/c\service_perfdata_file_processing_command=pnp-bulknpcd-service' /etc/icinga/icinga.cfg
+    sed -i '/host_perfdata_file_processing_command/c\host_perfdata_file_processing_command=pnp-bulknpcd-host' /etc/icinga/icinga.cfg
+
     cp /usr/share/doc/icinga-idoutils/examples/idoutils.cfg-sample /etc/icinga/modules/idoutils.cfg
     service ido2db start
     service icinga start
@@ -79,7 +96,7 @@ case "$1" in
 		setperm nagios nagios   755 /var/lib/pnp4nagios/perfdata
 		setperm nagios www-data	750 /var/log/pnp4nagios
 
-                ido2db
+                icinga_setup
 
 		db_get pnp4icinga-web/httpd
 		http_servers=`echo $RET | sed -e 's/,/ /g'`
