@@ -73,7 +73,7 @@ case "$1" in
                 cp /usr/share/doc/icinga-idoutils/examples/idoutils.cfg-sample /etc/icinga/modules/idoutils.cfg
                 service icinga restart
 
-		db_get pnp4nagios-web/httpd
+		db_get pnp4icinga-web/httpd
 		http_servers=`echo $RET | sed -e 's/,/ /g'`
 
 		for httpd in $http_servers; do

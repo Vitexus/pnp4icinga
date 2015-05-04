@@ -38,3 +38,7 @@ scripts/rrd_converter.pl
 man/npcd.8
 
 .pc
+/debian/pnp4icinga/
+/debian/pnp4icinga-bin/
+/debian/pnp4icinga-web/
+/debian/tmp/
