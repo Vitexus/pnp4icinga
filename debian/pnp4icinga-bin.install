@@ -10,5 +10,3 @@ usr/share/man/man8/npcd.8
 var/log/pnp4nagios/stats/
 var/lib/pnp4nagios/perfdata/
 var/spool/pnp4nagios/
-../pnp4icinga-bin.npcd.init /etc/init.d/npcd
-../pnp4icinga-bin.npcd.default /etc/default/npcd

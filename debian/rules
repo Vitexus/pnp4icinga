@@ -186,8 +186,8 @@ binary-arch: build install
 	dh_installdocs -A -a AUTHORS README debian/README.Debian
 	dh_installexamples -a
 	dh_installdebconf -a
-	dh_installinit -ppnp4nagios-bin --name=npcd
-	dh_installinit -ppnp4nagios-bin --name=pnp_gearman_worker
+	dh_installinit -ppnp4icinga-bin --name=npcd
+	dh_installinit -ppnp4icinga-bin --name=pnp_gearman_worker
 	dh_installman -a
 	dh_link -a
 	dh_strip -a
