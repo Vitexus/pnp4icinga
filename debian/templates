@@ -1,0 +1,7 @@
+Template: pnp4icinga-web/httpd
+Type: multiselect
+Choices: apache2, lighttpd, nginx, custom
+_Description: Web server to reconfigure automatically:
+ Please choose the web server that should be automatically configured
+ to run pnp4icinga-web.
+
