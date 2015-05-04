@@ -45,11 +45,12 @@ case "$1" in
 		setperm nagios nagios	770 /var/spool/pnp4nagios/nagios
 		setperm nagios nagios	770 /var/spool/pnp4nagios/npcd
 
-		if [ -d /etc/nagios3/conf.d/ ]; then
-			if [ ! -e /etc/nagios3/conf.d/pnp4nagios.cfg ]; then
-				ln -s /etc/pnp4nagios/nagios.cfg /etc/nagios3/conf.d/pnp4nagios.cfg
+		if [ -d /etc/icinga/conf.d/ ]; then
+			if [ ! -e /etc/icinga/objects/pnp4nagios.cfg ]; then
+				ln -s /etc/pnp4nagios/nagios.cfg /etc/icinga/objects/pnp4nagios.cfg
 			fi
 		fi
+                service npcd start
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)

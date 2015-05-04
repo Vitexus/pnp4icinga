@@ -22,7 +22,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 DAEMON=/usr/sbin/npcd
 NAME=npcd
-DESC="Nagios Performance C Daemon (PNP4Nagios)"
+DESC="Nagios Performance C Daemon (PNP4Nagios/Icinga)"
 LOGDIR=/var/log/pnp4nagios
 
 PIDFILE=/var/run/$NAME.pid
